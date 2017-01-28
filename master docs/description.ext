@@ -1,0 +1,119 @@
+#ifndef _SUB
+    //--- Unique for every mission variant
+    onLoadName = 160th Zeus;
+    overviewPicture = 160thSOR\data\160th.paa;
+#endif
+
+dev = "Nelso - adapted from Karel";
+author = 160th Operations - Nels0
+//onLoadMission = "";
+overviewText = $STR_A3_moduleMPTypeGameMaster_overviewText;
+overviewTextLocked = "";
+
+respawn = 2;
+respawnDelay = 20;
+respawnVehicleDelay = 30;
+respawnTemplates[] = {"MenuPosition","MenuInventory","Tickets"};
+respawnTemplatesVirtual[] = {};
+
+disabledAI = 1;
+joinUnassigned = 1;
+aiKills  = 1;
+
+class Header
+{
+    gameType = Zeus;
+    minPlayers = 1;
+    maxPlayers = 26;
+
+};
+
+
+class Params
+{
+    #ifndef GUERFRIENDLY_DEFAULT
+    #define GUERFRIENDLY_DEFAULT    -1
+    #endif
+
+    class GuerFriendly
+    {
+        title = $STR_DISP_INTEL_EDIT_GUERILLA;
+        values[] = {-1,1,0,2};
+        texts[] = {
+            $STR_DISP_INTEL_NONE_FRIENDLY,
+            $STR_DISP_INTEL_WEST_FRIENDLY,
+            $STR_DISP_INTEL_EAST_FRIENDLY,
+            $STR_DISP_INTEL_BOTH_FRIENDLY
+        };
+        default = GUERFRIENDLY_DEFAULT;
+        function = "BIS_fnc_paramGuerFriendly";
+    };
+
+    #ifndef DEBUGCONSOLE_DEFAULT
+    #define DEBUGCONSOLE_DEFAULT    1
+    #endif
+
+    class DebugConsole
+    {
+        title = $STR_A3_paramDebugConsole_title;
+        values[] = {0,1};
+        texts[] = {$STR_DISABLED,$STR_ENABLED};
+        default = DEBUGCONSOLE_DEFAULT;
+    };
+    class enableUnconsciousnessAI{
+        ACE_setting = 1
+        title = "AI Unconsciousness";
+        values[] = {0,1,2};
+        texts[] = {"Disabled", "50/50", "Enabled"}; 
+        default = 1;
+    };
+    class preventInstaDeath{
+        ACE_setting = 1
+        title = "Prevent Instant Death";
+        values[] = {0,1};
+        texts[] = {No,Yes};
+        default = 1;
+    }
+    class maxReviveTime{
+        ACE_setting = 1
+        title = "Max Unconscious Time";
+        values[] = {0,30,60,90,120,240,300};
+        default = 120;
+    }
+    class ace_medical_level{
+        ACE_setting = 1
+        title = "Ace Medical Complexity Level";
+        values[] = {0,1,2};
+        texts[] = {"Disabled","Basic","Advanced"}; 
+        default = 1;
+    };
+    class ace_medical_divider{
+        title = "  ---ACE Advanced Medical Settings---"
+        values[] = {1};
+        texts[] = {" "};
+    };
+    class ace_medical_medicSetting_PAK{
+        ACE_setting = 1
+        title = "    Who can use PAK";
+        values[] = {0,1,2};
+        texts[] = {"Anyone", "Medics only", "Doctors only"};
+        default = 1;
+    };
+    class ace_medical_consumeItem_PAK{
+        ACE_setting = 1
+        title = "    Consume PAK on use";
+        values[] = {0,1};
+        texts[] = {No,Yes};
+        default = 1;
+    };
+    class increaseTrainingInLocations{
+        ACE_setting = 1
+        title = "    Location Training Boost";
+        values[] = {0,1};
+        texts[] = {Disabled,Enabled};
+        default = 1;
+    };
+};
+
+
+
