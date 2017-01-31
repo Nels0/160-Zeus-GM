@@ -12,6 +12,4 @@ Should support all other mods.
 
 Setup: This will create hard symlinks from the master_docs folder to the various mission folder  
 
-N.B: requires the releases and master_docs folder to be set as hidden because I used a lazy workaround. Like, super lazy.
-
 Buildmission: This will update all the .pbos in the release folder. 
