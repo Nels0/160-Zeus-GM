@@ -2,16 +2,16 @@
 A light-weight (tiny mission size) Zeus game mode, based off the stock ZGM, but simpler, and with all objects available and unlimited.
 
 ## Requires
-
-Nothing!
-
-
-## Configured for:
 [Ace3](https://github.com/acemod/ACE3) - If you would like a version without ACE, remove the modules in the editor yourself, or ask for one. The ACE dependency may be removed in future versions.
 
 
+
+## Configured for:
+160th SOR Modset
+
+
 ## Compatibility
-Should support all other mods (That don't conflict with each other)
+Not vanilla compatible (Yet)
 
 ## Tools:  
 ### Disclaimer: These tools shouldn't touch anything outside the root folder, but use these at your own risk
