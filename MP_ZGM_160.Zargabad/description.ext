@@ -7,7 +7,7 @@
 dev = "Nelso - adapted from Karel";
 author = "160th Operations - Nels0";
 //onLoadMission = "";
-overviewText = $STR_A3_moduleMPTypeGameMaster_overviewText;
+overviewText = "Play in a scenario all dsign by the Zeus";
 overviewTextLocked = "";
 
 respawn = 2;
@@ -26,6 +26,20 @@ class Header
     minPlayers = 1;
     maxPlayers = 26;
 
+};
+
+class ACE_Settings{
+    #include "160_ace_config.hpp"
+};
+
+class Params{
+     class DebugConsole
+    {
+        title = "Debug Console for Admin";
+        values[] = {0,1};
+        texts[] = {$STR_DISABLED,$STR_ENABLED};
+        default = 1;
+    };
 };
 
 /*
