@@ -7,7 +7,7 @@
 dev = "Nelso - adapted from Karel";
 author = "160th Operations - Nels0";
 //onLoadMission = "";
-overviewText = "Play in a scenario all dsign by the Zeus";
+overviewText = "Play in a scenario all designed by the Zeus";
 overviewTextLocked = "";
 
 respawn = 2;
@@ -24,7 +24,7 @@ class Header
 {
     gameType = "Zeus";
     minPlayers = 1;
-    maxPlayers = 26;
+    maxPlayers = 82;
 
 };
 
