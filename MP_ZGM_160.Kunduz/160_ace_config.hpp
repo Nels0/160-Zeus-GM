@@ -10,7 +10,7 @@ class ace_common_forceAllSettings {
     force = 1;
 };
 class ace_common_checkPBOsAction {
-    value = 0;
+    value = 1;
     typeName = "SCALAR";
     force = 1;
 };
@@ -20,7 +20,7 @@ class ace_common_checkPBOsCheckAll {
     force = 1;
 };
 class ace_common_checkPBOsWhitelist {
-    value = "";
+    value = "["sa_advancedtowing","sa_advancedslingloading","cz75_nochain","headrangeplus","ar_advancedrappelling","ASM","ares","marmadebug","jsrs_environment","viewdistance_taw"]";
     typeName = "STRING";
     force = 1;
 };
@@ -255,7 +255,7 @@ class ace_medical_playerDamageThreshold {
     force = 1;
 };
 class ace_medical_AIDamageThreshold {
-    value = 1;
+    value = 1.8;
     typeName = "SCALAR";
     force = 1;
 };

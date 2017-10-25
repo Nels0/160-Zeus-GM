@@ -1,13 +1,13 @@
 #ifndef _SUB
     //--- Unique for every mission variant
     onLoadName = "160th Zeus";
-    overviewPicture = "160thSOR\data\160th.paa";
+    //overviewPicture = "160thSOR\data\160th.paa";
 #endif
 
 dev = "Nelso - adapted from Karel";
 author = "160th Operations - Nels0";
 //onLoadMission = "";
-overviewText = "Play in a scenario all designed by the Zeus";
+overviewText = "Play a scenario designed your Zeus";
 overviewTextLocked = "";
 
 respawn = 2;
@@ -40,6 +40,31 @@ class Params{
         texts[] = {$STR_DISABLED,$STR_ENABLED};
         default = 1;
     };
+    #ifndef GUERFRIENDLY_DEFAULT
+    #define GUERFRIENDLY_DEFAULT    -1
+    #endif
+
+    class GuerFriendly
+    {
+        title = "INDFOR Alliance";
+        values[] = {-1,1,0,2};
+        texts[] = {
+            $STR_DISP_INTEL_NONE_FRIENDLY,
+            $STR_DISP_INTEL_WEST_FRIENDLY,
+            $STR_DISP_INTEL_EAST_FRIENDLY,
+            $STR_DISP_INTEL_BOTH_FRIENDLY
+        };
+        default = GUERFRIENDLY_DEFAULT;
+        function = "BIS_fnc_paramGuerFriendly";
+    };
+    class ViewDistance
+	{
+		title = "View distance (in metres)";
+		values[] = {500,1000,2000,5000};
+		// When 'texts' are missing, values will be displayed directly instead
+		default = 1000;
+		file = "setViewDistance.sqf"; // (Optional) Script [[call]]ed when player joins, selected value is passed as an argument
+	};
 };
 
 /*
